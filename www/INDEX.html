@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html;
+			charset=utf-8">
+		<meta name="viewport" id="viewport"
+			content="width=device-width, height=device-height,
+			initial-scale=1.0, maximum-scale=1.0,
+			user-scalable=no;" />
+			
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+				
+		<script type="text/javascript" charset="utf-8"
+			src="cordova-2.2.0.js"></script>
+		
+		<script type="text/javascript" charset="utf-8">		
+			function onBodyLoad() {
+				document.addEventListener("deviceready", onDeviceReady,
+				false);
+			}
+			
+			function onDeviceReady() {
+				//Get the appInfo DOM element
+				var element = document.getElementById('appInfo');
+				//replace it with specific information about the device
+				//running the application
+				element.innerHTML = 'PhoneGap (version ' +
+				device.phonegap + ')<br />' + device.platform + ' ' +
+				device.name + ' (version ' + device.version + ').';
+			}
+		</script>
+	</head>
+	
+	<body> 
+	
+		<!-- Start of first page -->
+		<div data-role="page" id="foo">
+		
+			<div data-role="header">
+				<h1>RBC Ministries - Test</h1>
+				<a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+			</div><!-- /header -->
+		
+			<div data-role="content">	
+				<p>GitHub testing by JD... ****</p>		
+				<p>View internal page called <a href="#bar">bar</a></p>	
+				<p>View internal page called <a href="#chocolate">chocolate</a></p>
+			</div><!-- /content -->
+		
+			<div data-role="footer" data-position="fixed">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+		
+		
+		<!-- Start of second page -->
+		<div data-role="page" id="bar">
+		
+			<div data-role="header">
+				<a href="index.html" data-icon="delete">Cancel</a>
+				<h1>Event Registration</h1>
+				<a href="index.html" data-icon="check" data-theme="b">Save</a>
+			</div><!-- /header -->
+		
+			<div data-role="content">	
+				<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>		
+				<p><a href="#foo">Back to foo</a></p>	
+			</div><!-- /content -->
+
+			<div class="ui-bar ui-bar-b">
+				<h3><a href="#foo" data-role="button" data-mini="true">Back</a>
+				</h3>
+			</div>
+		
+			<div data-role="footer" data-position="fixed">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+		
+		<!-- Start of third page -->
+		<div data-role="page" id="chocolate">
+		
+			<div data-role="header">
+				<h1>Registration Successful</h1>
+			</div><!-- /header -->
+		
+			<div data-role="content">	
+				<p>This is chocolate page. In a multi-page setup, you are required to have page wrappers in your markup in order to group the content into multiple pages.</p>		
+				<p><a href="#foo">Back to foo</a></p>	
+			</div><!-- /content -->
+		
+			<div data-role="footer" data-position="fixed">
+				<h4>Page Footer</h4>
+			</div><!-- /footer -->
+		</div><!-- /page -->
+				
+	</body>
+</html>
